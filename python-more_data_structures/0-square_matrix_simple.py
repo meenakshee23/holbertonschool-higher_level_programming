@@ -3,9 +3,9 @@ def square_matrix_simple(matrix=[]):
     new_matrix = []
 
     for row in matrix:
-        square_matrix_simple = []
+        squared_row = []
         for num in row:
-            square_matrix_simple.append(num ** 2)
-            new_matrix.append(square_matrix_simple)
+            squared_row.append(num ** 2)
+            new_matrix.append(squared_row)
 
             return new_matrix
