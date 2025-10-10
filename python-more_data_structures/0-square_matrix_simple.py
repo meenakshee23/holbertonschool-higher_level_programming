@@ -6,6 +6,6 @@ def square_matrix_simple(matrix=[]):
         squared_row = []
         for num in row:
             squared_row.append(num ** 2)
-            new_matrix.append(squared_row)
+        new_matrix.append(squared_row)
 
-            return new_matrix
+    return new_matrix
