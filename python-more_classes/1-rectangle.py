@@ -1,0 +1,35 @@
+#!/usr/bin/python3
+"""This module defines an empty class Rectangle"""
+
+
+class Rectangle:
+    """Represents an empty rectangle"""
+
+    def __init__(self, width=0, height=0):
+        """Intializes the attributes of the Rectangle class"""
+        self.width = width
+        self.height = height
+
+    @property
+    def width(self):
+        """Getter for width"""
+        return self.__width
+
+    @width.setter
+    def width(self, value):
+        """Setter for width"""
+        return self.__height
+
+    @property
+    def height(self):
+        """Getter for height"""
+        return self.__height
+
+    @height.setter
+    def height(self, value):
+        """Setter for height"""
+        if not isinstance(value, int):
+            raise TypeError("height must be an integer")
+        if value < 0:
+            raise ValueError("height must be >= 0")
+        self.__height = value
