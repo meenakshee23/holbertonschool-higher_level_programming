@@ -27,4 +27,4 @@ class Rectangle(BaseGeometry):
         self._width = width
         self._height = height
 
-print(issubclass(Rectangle, BaseGeometry))
+print(dir(Rectangle))
