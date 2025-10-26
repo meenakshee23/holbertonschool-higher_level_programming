@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Module defining a FlyingFish class that inherits from Fish and Bird"""
+"""Defines a FlyingFish class inheriting from Fish and Bird"""
 
 
 class Fish:
@@ -27,7 +27,7 @@ class Bird:
 
 
 class FlyingFish(Fish, Bird):
-    """Represents a class of FlyingFish from both fish and bird"""
+    """Represents a FlyingFish inheriting from Fish and Bird"""
 
     def fly(self):
         """Prints a message"""
