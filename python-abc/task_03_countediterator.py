@@ -17,5 +17,5 @@ class CountedIterator:
         return item
 
     def get_count(self):
-        """Iterate over items using a loop or manual calls"""
-        return self.get_count
+        """Returns the num of items that have been iterated"""
+        return self._count
