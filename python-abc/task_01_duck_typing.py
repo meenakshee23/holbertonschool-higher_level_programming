@@ -19,6 +19,7 @@ class Shape(ABC):
 
 class Circle(Shape):
     """Circle class that inherits from Shape"""
+
     def __init__(self, radius):
         """Initializes a circle with the radius"""
         self.radius = radius
@@ -34,6 +35,7 @@ class Circle(Shape):
 
 class Rectangle(Shape):
     """Defines the rectangle"""
+
     def __init__(self, width, height):
         """Initialize a rectangle with width and height."""
         self.width = width
@@ -46,8 +48,7 @@ class Rectangle(Shape):
     def perimeter(self):
         """Return the perimeter of the rectangle."""
         return 2 * (self.width + self.height)
-    
-    
+
 def shape_info(shape):
     """Print the area and perimeter of the shape passed to the function"""
     print("Area: {}".format(shape.area()))
