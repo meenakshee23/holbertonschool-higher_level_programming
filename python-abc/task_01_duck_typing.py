@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""This module defines abstract base class, Shape, and concrete implementations"""
+"""Defines abstract base class, Shape, and concrete implementations"""
 from abc import ABC, abstractmethod
 import math
 
@@ -48,6 +48,7 @@ class Rectangle(Shape):
     def perimeter(self):
         """Return the perimeter of the rectangle."""
         return 2 * (self.width + self.height)
+
 
 def shape_info(shape):
     """Print the area and perimeter of the shape passed to the function"""
