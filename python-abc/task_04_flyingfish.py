@@ -15,7 +15,7 @@ class Fish:
 
 
 class Bird:
-    """Represent a class Bird"""
+    """Represents a class Bird"""
 
     def fly(self):
         """Prints a message"""
@@ -27,7 +27,7 @@ class Bird:
 
 
 class FlyingFish(Fish, Bird):
-    """Represents a class of Flyingfish from both fish and bird"""
+    """Represents a class of FlyingFish from both fish and bird"""
 
     def fly(self):
         """Prints a message"""
