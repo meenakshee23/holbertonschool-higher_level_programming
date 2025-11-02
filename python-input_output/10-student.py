@@ -14,7 +14,7 @@ class Student:
         """Retrieves a dictionary representation of a Student instance"""
         if attrs is None:
             return self.__dict__.copy()
-        
+
         filtered_dict = {}
         for key in attrs:
             if key in self.__dict__:
