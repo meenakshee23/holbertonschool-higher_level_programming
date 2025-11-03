@@ -12,10 +12,10 @@ class Student:
 
     def to_json(self, attrs=None):
         """Retrieves a dictionary representation of a Student instance"""
-        if type(attrs) == list:
+        if isinstance(attrs, list):
             new_dict = {}
             for a in attrs:
-                if type(a) == str and hasattr(self, a):
+                if isinstance(a) == str and hasattr(self, a):
                     new_dict[a] = getattr(self, a)
                     return new_dict
         return self.__dict__
