@@ -22,9 +22,9 @@ def deserialize_from_xml(filename):
      tree = ET.parse(filename)
      root = tree.getroot()
      
-     result = {}
+     data = {}
      
      for child in root:
-         result[child.tag] = child.text
+         data[child.tag] = child.text
 
-         return result
+         return data
