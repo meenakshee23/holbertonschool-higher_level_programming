@@ -1,0 +1,18 @@
+class MyList(list):
+    """Write a class MyList that inherits from list"""
+
+    def print_sorted(self):
+        """Prints the list, but sorted in ascending sort"""
+
+        >>> l = MyList([3, 1, 2])
+        >>> l.print_sorted()
+        [1, 2, 3]
+        >>> l
+        [3, 1, 2]
+        """
+        print(sorted(self))
+
+
+if __name__ == "__main__":
+    import doctest
+    doctest.testmod()
