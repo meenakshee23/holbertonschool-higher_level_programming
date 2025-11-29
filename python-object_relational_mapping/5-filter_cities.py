@@ -1,32 +1,40 @@
 #!/usr/bin/python3
 """
-Script that takes in the name of a state as an argument and lists all 
+Script that takes in the name of a state as an argument and lists all
 cities of that state, using the database hbtn_0e_4_usa
 """
 import MySQLdb
 import sys
 
 if __name__ == "__main__":
-    if len(sys.argv) != 5:
-        print("Usage: ./5-filter_cities.py <user> <password> <database> <state_name>")
-        sys.exit(1)
+    user = sys.argv[1]
+    password = sys.argv[2]
+    db_name = sys.argv[3]
+    state_name = sys.argv[4]
 
-    user, password, db_name, state_name = sys.argv[1:5]
-
-    db = MySQLdb.connect(host="localhost", port=3306,
-                         user=user, passwd=password, db=db_name)
+    db = MySQLdb.connect(
+        host="localhost",
+        port=3306,
+        user=user,
+        passwd=password,
+        db=db_name
+        )
     cursor = db.cursor()
 
-    query = """
-    SELECT cities.name
-    FROM cities
-    JOIN states ON cities.state_id = states.id
-    WHERE states.name = %s
-    ORDER BY cities.id ASC
-    """
-    cursor.execute(query, (state_name,))
+    cursor.execute(
+        "SELECT cities.name FROM cities "
+        "JOIN states ON cities.state_id = states.id "
+        "WHERE states.name = %s "
+        "ORDER BY cities.id ASC",
+        (state_name,)
+    )
 
-    cities = [row[0] for row in cursor.fetchall()]
+    rows = cursor.fetchall()
+
+    cities = []
+    for row in rows:
+        cities.append(row[0])
+
     print(", ".join(cities))
 
     cursor.close()
