@@ -8,14 +8,14 @@ from sqlalchemy.orm import sessionmaker
 from model_state import Base, State
 
 if __name__ == "__main__":
-    if len(sys.argv) != 4:
-        print("Usage: ./7-model_state_fetch_all.py <username> <password> <database>")
-        sys.exit(1)
+    user = sys.argv[1]
+    passwd = sys.argv[2]
+    db = sys.argv[3]
 
-    user, password, db_name = sys.argv[1], sys.argv[2], sys.argv[3]
-
-    engine = create_engine(f"mysql+mysqldb://{user}:{password}@localhost:3306/{db_name}",
-                           pool_pre_ping=True)
+    engine = create_engine(
+        f"mysql+mysqldb://{user}:{passwd}@localhost:3306/{db}",
+        pool_pre_ping=True
+    )
 
     Session = sessionmaker(bind=engine)
     session = Session()
