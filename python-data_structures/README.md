@@ -1,9 +1,9 @@
-```# Python Data Structures```
+```## Python Data Structures```
 
 ## Data Structures Covered
 
-- List
-- Tuple
+- Lists
+- Tuples
 - Set
 - Dictionary
 - Stack
