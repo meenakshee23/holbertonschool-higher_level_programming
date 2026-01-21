@@ -8,5 +8,5 @@ def only_diff_elements(set_1, set_2):
 
         if (item in set_1) != (item in set_2):
             result.add(item)
-            
+
     return result
