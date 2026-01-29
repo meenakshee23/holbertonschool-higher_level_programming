@@ -1,10 +1,15 @@
 #!/usr/bin/python3
-Rectangle = import(‘3-rectangle’).Rectangle
+Rectangle = __import__('3-rectangle').Rectangle
 
-myrectangle = Rectangle(2, 4) print(“Area: {} - Perimeter: {}”.format(myrectangle.area(), my_rectangle.perimeter()))
+my_rectangle = Rectangle(2, 4)
+print("Area: {} - Perimeter: {}".format(my_rectangle.area(), my_rectangle.perimeter()))
 
-print(str(myrectangle)) print(repr(myrectangle))
+print(str(my_rectangle))
+print(repr(my_rectangle))
 
-print(“–”)
+print("--")
 
-myrectangle.width = 10 myrectangle.height = 3 print(myrectangle) print(repr(myrectangle))
+my_rectangle.width = 10
+my_rectangle.height = 3
+print(my_rectangle)
+print(repr(my_rectangle))
