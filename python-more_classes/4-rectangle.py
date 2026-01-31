@@ -48,10 +48,6 @@ class Rectangle:
             return 0
         return 2 * (self.__width + self.__height)
 
-    def area(self):
-        """Return the area of the rectangle"""
-        return self.__width * self.__height
-
     def __str__(self):
         """
         Return a string representation of the rectangle using '#' characters
@@ -64,3 +60,7 @@ class Rectangle:
             if i < self.__height - 1:
                 rectangle_str += "\n"
         return rectangle_str
+    
+    def __repr__(self):
+        """Return a string representation of the rectangle"""
+        return "Rectangle({}, {})".format(self.__width, self.__height)
