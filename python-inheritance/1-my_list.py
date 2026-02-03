@@ -2,6 +2,8 @@
 """This module writes a class MyList that inherits from list"""
 
 
-def print_sorted(self):
-    """Prints the list in sorted ascending order"""
-    print(sorted(self))
+class MyList(list):
+    """A class MyList that inherits from list"""
+    def print_sorted(self):
+        """Prints the list in sorted ascending order"""
+        print(sorted(self))
