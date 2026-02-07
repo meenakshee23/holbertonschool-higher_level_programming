@@ -4,7 +4,7 @@ import math
 
 
 class Shape(ABC):
-    """Reprensents an abstract class named Shape"""
+    """Represents an abstract class named Shape"""
 
     @abstractmethod
     def area(self):
@@ -18,11 +18,11 @@ class Shape(ABC):
 
 
 class Circle(Shape):
-    """Represents a Claass"""
+    """Represents a Circle"""
 
     def __init__(self, radius):
         """Initialize the circle with a radius"""
-        self.radius = radius
+        self.radius = abs(radius)
 
     def area(self):
         """Return the area of the circle"""
