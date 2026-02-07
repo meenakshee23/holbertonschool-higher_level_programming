@@ -1,0 +1,28 @@
+#!/usr/bin/env python3
+"""
+A class named CountedIterator that extends the
+built-in iterator obtained from the iter function
+"""
+
+
+class CountedIterator:
+    """An iterator that counts how many items have been fetched"""
+
+    def __init__(self, iterable):
+        """Initialize with an iterable and a counter"""
+        self.iterator = iter(iterable)
+        self.count = 0
+
+    def __next__(self):
+        """Return the next item and increment the counter"""
+        item = next(self.iterator)
+        self.count += 1
+        return item
+
+    def get_count(self):
+        """Return the number of items iterated so far"""
+        return self.count
+
+    def __iter__(self):
+        """Return self as an iterator"""
+        return self
