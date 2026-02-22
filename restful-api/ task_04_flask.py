@@ -5,29 +5,27 @@ from flask import Flask, jsonify, request
 
 app = Flask(__name__)
 
+# Start empty for tests
 users = {}
+
 
 @app.route("/")
 def home():
-    """Root endpoint"""
     return "Welcome to the Flask API!"
 
 
 @app.route("/data")
 def get_usernames():
-    """Returns list of all usernames"""
     return jsonify(list(users.keys()))
 
 
 @app.route("/status")
 def status():
-    """Returns OK status"""
     return "OK"
 
 
 @app.route("/users/<username>")
 def get_user(username):
-    """Returns user data by username"""
     user = users.get(username)
     if user:
         return jsonify(user)
@@ -36,7 +34,6 @@ def get_user(username):
 
 @app.route("/add_user", methods=["POST"])
 def add_user():
-    """Adds a new user via POST"""
     try:
         data = request.get_json(force=True)
     except Exception:
