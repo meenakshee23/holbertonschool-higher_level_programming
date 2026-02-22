@@ -68,3 +68,6 @@ def invalid_token(err):
 @jwt.expired_token_loader
 def expired_token(jwt_header, jwt_payload):
     return jsonify({"error": "Token has expired"}), 401
+
+if __name__ == "__main__":
+    app.run
