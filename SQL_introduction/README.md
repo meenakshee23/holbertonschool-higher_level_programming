@@ -1,5 +1,9 @@
 learning SQL Better
 
+## SQL Definition:
+~ SQL (Structured Query Language) is the standardized, domain-specific programming language used to interact with and manage relational database management systems (RDBMS)
+
+
 
  ## What I learned:
 
