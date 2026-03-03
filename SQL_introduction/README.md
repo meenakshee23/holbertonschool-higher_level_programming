@@ -1,5 +1,16 @@
 learning SQL Better
 
+ *SQL stand for Structured Query Language*
+
+What is a relational database?
+a table containing only one object representation
+
+*DDL stand for Data Definition Language*
+
+*DML stand for Data Manipulation Language*
+
+
+
 ## SQL Definition:
 ~ SQL (Structured Query Language) is the standardized, domain-specific programming language used to interact with and manage relational database management systems (RDBMS)
 
@@ -24,3 +35,4 @@ learning SQL Better
 - Counting rows: I can count rows that meet specific conditions using `SELECT COUNT(*) FROM table_name WHERE ....`
 
 
+to be continued...
