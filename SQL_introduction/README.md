@@ -34,4 +34,4 @@ a table containing only one object representation
 
 - Counting rows: I can count rows that meet specific conditions using `SELECT COUNT(*) FROM table_name WHERE ....`
 
-- 
+- to be contined ...
