@@ -15,8 +15,12 @@ if __name__ == "__main__":
 
     cur = db.cursor()
     # Case-sensitive filter: name starting with uppercase N
-    cur.execute("SELECT * FROM states WHERE BINARY name LIKE 'N%' ORDER BY id ASC")
-
+    cur.execute(
+        "SELECT * FROM states "
+        "WHERE BINARY name LIKE 'N%' "
+        "ORDER BY id ASC"
+    )
+    
     for row in cur.fetchall():
         print(row)
 
