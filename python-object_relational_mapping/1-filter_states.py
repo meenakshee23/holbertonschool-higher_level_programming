@@ -5,7 +5,6 @@ import MySQLdb
 import sys
 
 if __name__ == "__main__":
-    # Connect to MySQL
     db = MySQLdb.connect(
         host="localhost",
         port=3306,
@@ -15,8 +14,8 @@ if __name__ == "__main__":
     )
 
     cur = db.cursor()
-    # Select states starting with 'N'
-    cur.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id ASC")
+    # Case-sensitive filter: name starting with uppercase N
+    cur.execute("SELECT * FROM states WHERE BINARY name LIKE 'N%' ORDER BY id ASC")
 
     for row in cur.fetchall():
         print(row)
