@@ -6,4 +6,3 @@ updateButton.addEventListener('click', function() {
 
     mainHeader.textContent = "New Header!!!";
 });
-
