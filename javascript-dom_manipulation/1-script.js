@@ -1,4 +1,4 @@
-const redHeader = document.getElementById('red_header');
+const redHeader = document.querySelector('#red_header');
 
 const header = document.querySelector('header');
 
