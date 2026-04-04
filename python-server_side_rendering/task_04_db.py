@@ -56,6 +56,7 @@ def get_sql_data():
 @app.route('/products')
 def products():
     source = request.args.get('source')
+    product_id = request.args.get('id')
 
     if source == 'json':
         products = get_json_data()
@@ -68,6 +69,17 @@ def products():
 
     if products is None:
         return render_template('product_display.html', error="Error loading data")
+    
+    if product_id:
+        try:
+            product_id = int(product_id)
+            products = [p for p in products if p['id'] == product_id]
+
+            if not products:
+                return render_template('product_display.html', error="Product not found")
+
+        except Exception:
+            return render_template('product_display.html', error="Wrong id")
 
     return render_template('product_display.html', products=products)
 
